@@ -1,26 +1,26 @@
 var hTag = document.getElementsByTagName("h1")[0];
 var bodyTag = document.getElementsByTagName("body")[0];
-var toggleContainer = document.getElementById("toggle");
-var circle = document.getElementById("button-switch");
+var toggle = document.getElementById("toggle");
+var button = document.getElementById("button-switch");
 
-var isToggled = false;
+var Toggled = false;
 
-toggleContainer.onclick = function () {
-    if (!isToggled) {
+toggle.onclick = function () {
+    if (!Toggled) {
         hTag.classList.add("color-white");
         bodyTag.classList.add("bck-color-black");
-        circle.classList.add("dark-mode");
+        button.classList.add("dark-mode");
 
-        toggleContainer.style.backgroundColor = "#333"; // Change button background color
+        toggle.style.backgroundColor = "#333"; // Change button background color
 
-        isToggled = true;
+        Toggled = true;
     } else {
         hTag.classList.remove("color-white");
         bodyTag.classList.remove("bck-color-black");
-        circle.classList.remove("dark-mode");
+        button.classList.remove("dark-mode");
 
-        toggleContainer.style.backgroundColor = "#222"; // Change button background color
+        toggle.style.backgroundColor = "#222"; // Change button background color
 
-        isToggled = false;
+        Toggled = false;
     }
 }
